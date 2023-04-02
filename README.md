@@ -1,8 +1,8 @@
-Keep Your Health Data Private but don't compromise on your health!
+# Keep Your Health Data Private but don't compromise on your health!
 
-This project uses the Risc Zero VM to validate that your average resting heart rate is below 100 bpm without revealing what your resting bpm is.
+## This project uses the Risc Zero VM to validate that your average resting heart rate is below 100 bpm without revealing what your resting bpm is.
 
-Project is heavily built upon `https://github.com/risc0/risc0/tree/main/examples/json`
+Project is heavily built upon https://github.com/risc0/risc0/tree/main/examples/json
 
 To run, simply head over to json.
 
