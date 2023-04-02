@@ -18,6 +18,7 @@ use risc0_zkvm::{
     serde::{from_slice, to_vec},
     Prover,
 };
+use serde_json::{json, Value};
 
 fn main() {
     let data = include_str!("../res/example.json");
@@ -40,7 +41,7 @@ fn main() {
     let journal = &receipt.journal;
     let outputs: Outputs = from_slice(&journal).expect("Journal should contain an Outputs object");
 
-    println!("\nThe JSON file with hash\n  {:?}\nprovably contains a field 'critical_data' with value {}\n", outputs.hash, outputs.data);
+    println!("\nThe JSON file with hash\n  {:?}\nprovably contains a field 'heart rate' with a value less than 100 \n", outputs.hash);
 }
 
 #[cfg(test)]
@@ -72,7 +73,7 @@ mod tests {
         let outputs: Outputs =
             from_slice(&journal).expect("Journal should contain an Outputs object");
         assert_eq!(
-            outputs.data, 47,
+            outputs.data, 57,
             "Did not find the expected value in the critical_data field"
         );
     }

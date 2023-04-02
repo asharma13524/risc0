@@ -27,10 +27,18 @@ pub fn main() {
     let data: String = env::read();
     let sha = *Impl::hash_bytes(&data.as_bytes());
     let data = parse(&data).unwrap();
-    let proven_val = data["critical_data"].as_u32().unwrap();
+
+    // println!("{}", data);
+
+    let proven_val = data["quantity"]["value"].as_u32().unwrap();
+    if proven_val >= 100 {
+        panic!("Your heart rate was greater than or equal to 100, go see a doctor!");
+    }
+
     let out = Outputs {
         data: proven_val,
         hash: sha,
     };
+    println!("Your heart rate is in the clear! You had no resting hear rate readings above 100 bpm. Keep up the good work");
     env::commit(&out);
 }

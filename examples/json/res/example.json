@@ -1,12 +1,11 @@
 {
-    "boolean_field": true,
-    "critical_data": 47,
-    "obj_field": {
-        "string_subfield": "hello world",
-        "array_subfield": [
-            "more",
-            "example",
-            "text"
-        ]
-    }
+  "startDate": "2022-04-02T22:35:43Z",
+  "endDate": "2022-03-31T22:35:43Z",
+  "quantity": {
+      "value": 65,
+      "unit": "ms"
+  },
+  "metadata": {
+      "HKHeartRateVariabilityMetadataKeyWasTakenInLab": false
+  }
 }
